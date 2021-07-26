@@ -47,7 +47,7 @@
     "fastify-static": "^4.2.2",
     "get-stream": "^4.1.0",
     "nodemon": "^2.0.4",
-    "pug": "^3.0.0",
+    "pug": "^3.0.2",
     "superagent": "^6.0.0",
     "undici": "^4.2.2"
   }
