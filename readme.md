@@ -32,10 +32,12 @@ Install dependancies
 ```
 npm install
 ```
+Get API key by creating an account at [OpenWeatherMap](https://home.openweathermap.org/api_keys)
 
 Start application
-
 ```
+APIKEY=<your_api_key>
+export APIKEY
 npm start
 ```
 
