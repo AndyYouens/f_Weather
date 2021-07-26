@@ -2,9 +2,10 @@
 const app = require('fastify')({
   logger: true
 })
+const getStream = require('get-stream')
 const {request} = require('undici')
 const debug = require('debug')('weather:index')
-
+let weatherText = ''
 const apiKey = process.env.APIKEY
 if(null == apiKey) {
   console.error('APIKEY variable not set')
@@ -40,11 +41,7 @@ app.post('/', async function(req, res) {
     return;
   }
   body.setEncoding('utf8')
-  let bodystr = ''
-  for await (const data of body) {
-    bodystr += data;
-  }
-  let resp = JSON.parse(bodystr)    
+  let resp = await JSON.parse(await getStream(body))
   debug(resp.main.temp)
   let weatherText = `Weather is ${resp.weather[0].main},
     (${resp.weather[0].description})
