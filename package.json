@@ -36,16 +36,19 @@
     }
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
     "chalk": "^4.1.0",
-    "cookie-parser": "~1.4.4",
     "debug": "^2.6.9",
     "dotenv": "^8.2.0",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
+    "fastify": "^3.19.2",
+    "fastify-cookie": "^5.3.1",
+    "fastify-formbody": "^5.1.0",
+    "fastify-pug": "^2.0.0",
+    "fastify-simple-form": "^2.0.0",
+    "fastify-static": "^4.2.2",
+    "get-stream": "^4.1.0",
     "nodemon": "^2.0.4",
-    "pug": "^3.0.0",
-    "superagent": "^6.0.0"
+    "pug": "^3.0.2",
+    "superagent": "^6.0.0",
+    "undici": "^4.2.2"
   }
 }
