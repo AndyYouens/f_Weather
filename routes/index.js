@@ -5,6 +5,8 @@ const app = require('fastify')({
 const getStream = require('get-stream')
 const {request} = require('undici')
 const debug = require('debug')('weather:index')
+require('dotenv').config()
+
 let weatherText = ''
 const apiKey = process.env.APIKEY
 if(null == apiKey) {
@@ -42,7 +44,7 @@ app.post('/', async function(req, res) {
   }
   body.setEncoding('utf8')
   let resp = await JSON.parse(await getStream(body))
-  debug(resp.main.temp)
+  debug(`API response is: ${JSON.stringify(resp, null, 2)}`)
   let weatherText = `Weather is ${resp.weather[0].main},
     (${resp.weather[0].description})
     ,
