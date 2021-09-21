@@ -24,7 +24,7 @@ git clone https://github.com/AndyYouens/f_Weather.git
 CD into directory
 
 ```
-cd \f_Weather
+cd f_Weather
 ```
 
 Install dependancies
@@ -32,16 +32,33 @@ Install dependancies
 ```
 npm install
 ```
+
 Get API key by creating an account at [OpenWeatherMap](https://home.openweathermap.org/api_keys)
 
 Start application
 ```
 APIKEY=<your_api_key>
 export APIKEY
-npm start
+npm start (to run in debug mode, type npm run debug)
 ```
 
 Point your browser to https://your-IBMi:4000
+
+## Additional Setup
+
+Save yourself time by placing your API key in a .env file in the root of this application.
+
+Additionally, if you wish to change the PORT number this application runs on, this also can be placed in the .env file.  
+An example .env file is shown below.
+
+```
+APIKEY=58fe301faedc550510e8b2dd6222449x
+PORT=4000
+DEBUG=weather
+HOSTNAME=GALATEA
+```
+
+The .env file should **NOT** be included within source control and should be added to your .gitignore file.
 
 # Authors
 
