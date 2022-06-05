@@ -33,7 +33,7 @@
     "fastify-formbody": "^5.1.0",
     "fastify-pug": "^2.0.0",
     "fastify-simple-form": "^2.0.0",
-    "fastify-static": "^4.2.2",
+    "fastify-static": "^4.4.1",
     "get-stream": "^6.0.1",
     "pug": "^3.0.2",
     "superagent": "^6.0.0",
